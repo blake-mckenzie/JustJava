@@ -1,5 +1,5 @@
 
-package com.example.android.justjava;
+package com.example.justjava;
 
 
 
