@@ -24,14 +24,13 @@ public class MainActivity extends AppCompatActivity {
      * This method is called when the order button is clicked.
      */
     public void submitOrder(View view) {
-        display(1);
+        int numberOfCoffees =999999999 ;
+        display(numberOfCoffees);
+        displayPrice( numberOfCoffees * );
+    }
 
 
-    display(2);
 
-    displayPrice(2*5);
-
-}
     /**
      * This method displays the given quantity value on the screen.
      */
@@ -40,12 +39,11 @@ public class MainActivity extends AppCompatActivity {
         quantityTextView.setText("" + number);
     }
 
-    {
-        /**
-         * This method displays the given price on the screen.
-         */
+     /**
+     * This method displays the given price on the screen.
+     */
         private void displayPrice ( int number){
         TextView priceTextView = (TextView) findViewById(R.id.price_text_view);
         priceTextView.setText(NumberFormat.getCurrencyInstance().format(number));
-     }
+    }
     }
