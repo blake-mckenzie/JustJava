@@ -42,8 +42,20 @@ public class MainActivity extends AppCompatActivity {
      /**
      * This method displays the given price on the screen.
      */
-        private void displayPrice ( int number){
+        private void displayPrice ( int number) {
         TextView priceTextView = (TextView) findViewById(R.id.price_text_view);
         priceTextView.setText(NumberFormat.getCurrencyInstance().format(number));
-    }
-    }
+
+        public void increment(View view){
+                int quantity = 2;
+                quantity =3;
+                quantity = 4;
+                quantity = 5;
+                display(quantity);
+            }
+
+            public void decrement(View view) {
+                    int quantity = 1;
+                    display(quantity);
+
+            }
