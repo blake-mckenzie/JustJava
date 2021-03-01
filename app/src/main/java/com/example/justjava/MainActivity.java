@@ -20,15 +20,21 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
     }
 
+
+    /**
+     * Declare Global Variable Here
+     */
+    int quantity = 0;
+
+
     /**
      * This method is called when the order button is clicked.
      */
     public void submitOrder(View view) {
-        int numberOfCoffees =5 ;
+        int numberOfCoffees = quantity;
         display(numberOfCoffees);
-        displayPrice( numberOfCoffees *5);
+        displayPrice(numberOfCoffees * 5);
     }
-
 
 
     /**
@@ -39,24 +45,25 @@ public class MainActivity extends AppCompatActivity {
         quantityTextView.setText("" + number);
     }
 
-     /**
+    /**
      * This method displays the given price on the screen.
      */
-        private void displayPrice ( int number) {
+    private void displayPrice(int number) {
         TextView priceTextView = (TextView) findViewById(R.id.price_text_view);
         priceTextView.setText(NumberFormat.getCurrencyInstance().format(number));
+    }
 
-        public void increment(View view){
-                int quantity = 2;
-                quantity = quantity +1
-                display(quantity);
-            }
+    public void increment(View view) {
+        quantity++;
+        display(quantity);
+    }
 
-            public void decrement(View view) {
-                    int quantity = 1;
-                   quantity = quantity -1
+    public void decrement(View view) {
+        if (quantity > 0) {
+            quantity--;
+            display(quantity);
+        }
+    }
 
 
-                    display(quantity);
-
-            }
+}
