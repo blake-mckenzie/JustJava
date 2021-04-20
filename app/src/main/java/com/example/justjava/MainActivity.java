@@ -35,7 +35,7 @@ public class MainActivity extends AppCompatActivity {
      String priceMessage = "thank you for ordering" + quantity + "coffees! \n Amount Due: $" + price; //I used the escape key\n
      priceMessage = priceMessage + "\n\nYour order will be right up!";
      displayMessage(priceMessage);
-
+     calculatePrice(quantity, 10);
    }
 
 
@@ -74,4 +74,17 @@ public class MainActivity extends AppCompatActivity {
         TextView priceTextView = (TextView) findViewById(R.id.price_text_view);
         priceTextView.setText(message);
     }
+
+    /**
+     * Calculates the price of the order.
+     *
+     * @param quantity is the number of cups of coffee ordered
+     * @param pricePerCup tells us hte price per cup of coffee
+     */
+   private void calculatePrice(int quantity, int pricePerCup){
+       int price = quantity * pricePerCup;
+    }
+
+
+
 }
