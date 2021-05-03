@@ -8,15 +8,25 @@
     android:paddingRight="16dp">
 
 
-
     <TextView
         android:id="@+id/quantity_title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
         android:layout_marginBottom="16dp"
-        android:text="Quantity"
-        android:textAllCaps="true" />
+        android:text="Toppings"
+        />
+
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Whipped Cream"
+        android:textSize="16sp"
+        android:paddingLeft="24dp"
+
+
+        />
+
 
     <TextView
         android:layout_width="wrap_content"
@@ -45,7 +55,7 @@
             android:paddingLeft="8dp"
             android:paddingRight="8dp"
             android:text="0"
-            android:textColor="#FFFFFF"
+
             android:textSize="16sp" />
 
         <Button
@@ -69,7 +79,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="$0"
-        android:textColor="#FFFFFF"
+
         android:textSize="16sp" />
 
     <Button
