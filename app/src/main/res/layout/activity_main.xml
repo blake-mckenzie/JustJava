@@ -15,17 +15,17 @@
         android:layout_marginTop="16dp"
         android:layout_marginBottom="16dp"
         android:text="Toppings"
+        android:textColor="@color/colorPrimaryDark"
         />
 
     <CheckBox
         android:id="@+id/whipped_cream_checkbox"
-
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Whipped Cream"
         android:textSize="16sp"
         android:paddingLeft="24dp"
-
+        android:textColor="@color/colorAccent"
 
         />
 
@@ -36,7 +36,9 @@
         android:layout_marginTop="16dp"
         android:layout_marginBottom="16dp"
         android:text="Quantity"
-        android:textAllCaps="true" />
+        android:textAllCaps="true"
+        android:textColor="@color/colorPrimaryDark"
+        />
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -74,14 +76,16 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="16dp"
         android:text="Price"
-        android:textAllCaps="true" />
+        android:textAllCaps="true"
+        android:textColor="@color/colorPrimaryDark"
+        />
 
     <TextView
         android:id="@+id/price_text_view"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="$0"
-
+        android:textColor="@color/colorAccent"
         android:textSize="16sp" />
 
     <Button
