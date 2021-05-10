@@ -66,22 +66,15 @@ public class MainActivity extends AppCompatActivity {
 
 
         int price = calculatePrice();
-        int displaymessage = price;
-        displayMessage(createOrderSummary(displaymessage));
-
-
-
-
-
-    }
-
-    private String createOrderSummary(int price){
-        String priceMessage = "Thank you for ordering " + quantity + " Coffees! \nAmount Due: $" + price; //I used the escape key \n to put info on a new line
-        priceMessage = priceMessage + "\n\nYour order will be right up!"; //Double \n escape key for w line separation
+        String priceMessage = createOrderSummary(price, hasWhippedCream);
         displayMessage(priceMessage);
-        return priceMessage;
+
+
+
+
 
     }
+
 
 
     int calculatePrice(){
@@ -119,12 +112,14 @@ public class MainActivity extends AppCompatActivity {
      * Create a summary of our order
      * @param price
      * @return priceMessage
+     * @param hasWhippedCream is whether or not the user wants Whipped Cream Topping
      */
 
 
     private String createOrderSummary(int price, boolean hasWhippedCream) {
         String priceMessage = "Thank you for ordering " + quantity + " Coffees! \nAmount Due: $" + price; //I used the escape key \n to put info on a new line
-        priceMessage = priceMessage + "\n\nYour order will be right up!"; //Double \n escape key for w line separation
+        priceMessage += "\nAdd Whipped Cream? " + hasWhippedCream;
+        priceMessage += "\n\nYour order will be right up!"; //Double \n escape key for w line separation
         return priceMessage;
 
 
