@@ -5,14 +5,24 @@
     android:layout_height = "match_parent"
     android:layout_width = "match_parent">
 
-    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
         android:paddingLeft="16dp"
-        android:text="Toppings"
-        android:paddingRight="16dp">
-    
+        android:paddingRight="16dp"
+        android:text="Toppings">
+
+        <EditText
+            android:id="@+id/user_input_name_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Name"
+            android:inputType="textCapWords"
+
+
+            />
+
 
         <TextView
             android:id="@+id/quantity_title"
@@ -21,17 +31,16 @@
             android:layout_marginTop="16dp"
             android:layout_marginBottom="16dp"
             android:text="Toppings"
-            android:textColor="@color/colorPrimaryDark"
-            />
+            android:textColor="@color/colorPrimaryDark" />
 
         <CheckBox
             android:id="@+id/whipped_cream_checkbox"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Whipped Cream"
-            android:textSize="16sp"
             android:paddingLeft="24dp"
+            android:text="Whipped Cream"
             android:textColor="@color/colorAccent"
+            android:textSize="16sp"
 
             />
 
@@ -39,10 +48,10 @@
             android:id="@+id/chocolate"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Chocolate"
-            android:textSize="16sp"
             android:paddingLeft="24dp"
-            android:textColor="@color/colorAccent"/>
+            android:text="Chocolate"
+            android:textColor="@color/colorAccent"
+            android:textSize="16sp" />
 
         <TextView
             android:layout_width="wrap_content"
@@ -51,8 +60,7 @@
             android:layout_marginBottom="16dp"
             android:text="Quantity"
             android:textAllCaps="true"
-            android:textColor="@color/colorPrimaryDark"
-            />
+            android:textColor="@color/colorPrimaryDark" />
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -91,8 +99,7 @@
             android:layout_marginBottom="16dp"
             android:text="Price"
             android:textAllCaps="true"
-            android:textColor="@color/colorPrimaryDark"
-            />
+            android:textColor="@color/colorPrimaryDark" />
 
         <TextView
             android:id="@+id/price_text_view"
