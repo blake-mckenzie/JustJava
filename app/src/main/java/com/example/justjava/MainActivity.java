@@ -16,6 +16,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
 import android.widget.CheckBox;
+import android.widget.EditText;
 import android.widget.TextView;
 import java.text.NumberFormat;
 
@@ -57,24 +58,32 @@ public class MainActivity extends AppCompatActivity {
      * This method is called when the order button is clicked.
      */
     public void submitOrder(View view) {
+       //Get text from the EditText XML
+        EditText nameField = (EditText) findViewById(R.id.user_input_name_view);
+        String name = nameField.getText().toString();
+        Log.v("MainActivity", "Name:"+ name);
+
+
         //Figure out if user wants whipped cream
         CheckBox whippedCreamCheckBox = (CheckBox)findViewById(R.id.whipped_cream_checkbox);
         boolean hasWhippedCream = whippedCreamCheckBox.isChecked();
         Log.v("MainActivity", "Has whipped cream:" + hasWhippedCream);
 
       //Figure out if user wants chocolate topping
-        CheckBox chocolateCheckBox = (CheckBox)findViewById(R.id.chocolate_checkbox);
+        CheckBox chocolateCheckBox = (CheckBox)findViewById(R.id.chocolate);
         boolean hasChocolate = chocolateCheckBox.isChecked();
+        Log.v("MainActivity", "Add Chocolate Topping: " + hasChocolate);
+
+
 
         int price = calculatePrice();
-        String priceMessage = createOrderSummary(price,hasWhippedCream);
+        String priceMessage = createOrderSummary(price,hasWhippedCream, hasChocolate, name);
         displayMessage(priceMessage);
 
 
 
     //Display the order summary on the string
-        String priceMessage = createOrderSummary(price, hasWhippedCream,hasChocolate);
-        displayMessage(priceMessage);
+
 
 
     }
@@ -117,12 +126,13 @@ public class MainActivity extends AppCompatActivity {
      * @param price
      * @return priceMessage
      * @param hasWhippedCream is whether or not the user wants Whipped Cream Topping
+     * @param name of the customer
      */
 
 
-    private String createOrderSummary(int price, boolean hasWhippedCream, boolean addChocolate) {
-        String priceMessage ="\nName: Blake McKenzie";
-        priceMessage += "Thank you for ordering " + quantity + " Coffees!";  //I used the escape key \n to put info on a new line
+    private String createOrderSummary(int price, boolean hasWhippedCream, boolean addChocolate, String name) {
+        String priceMessage ="\nName: "+ name;
+        priceMessage += "\nThank you for ordering " + quantity + " Coffees!";  //I used the escape key \n to put info on a new line
         priceMessage += "\nAdd Whipped Cream? " + hasWhippedCream;
         priceMessage += "\nAdd Chocolate Topping" + addChocolate;
         priceMessage += "\nAmount Due: $" + price;
