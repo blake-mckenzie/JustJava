@@ -79,7 +79,11 @@ public class MainActivity extends AppCompatActivity {
 
 
 
+<<<<<<< HEAD
     //Bring up the email application and send an email to
+=======
+//Bring up the email application and send an email to
+>>>>>>> Lesson5ContinuedOnBranch
         Intent intent = new Intent(Intent.ACTION_SENDTO);
         intent.setData(Uri.parse("mailto"));//only email apps should handle this
         intent.putExtra(Intent.EXTRA_SUBJECT, "Just Java order for " + name);
