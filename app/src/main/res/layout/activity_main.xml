@@ -117,5 +117,17 @@
             android:layout_marginTop="16dp"
             android:onClick="submitOrder"
             android:text="Order" />
+
+        <TextView
+            android:id="@+id/CoffeeAccessoriesButton"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:text="Coffee Store Accessories"
+            android:background="@android:color/darker_gray"
+            android:layout_marginTop="16dp"
+            android:textStyle="bold"
+            android:gravity="center_horizontal"/>
+
+
     </LinearLayout>
 </ScrollView>

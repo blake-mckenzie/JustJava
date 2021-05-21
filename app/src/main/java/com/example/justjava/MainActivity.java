@@ -33,6 +33,26 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        final TextView coffeeAccessories = (TextView) findViewById(R.id.CoffeeAccessoriesButton);
+
+//This is to go to another page via a TextView.
+// If you want another page just copy and paste this below with updated information.
+
+
+        coffeeAccessories.setOnClickListener(new View.OnClickListener()
+        {
+            @Override
+            public void onClick(View v) {
+                Intent coffeeAccessoriesPage = new Intent(MainActivity.this, coffeeAccessoriesPage.class);
+                startActivity(coffeeAccessoriesPage);
+            }
+        });
+
+
+
+
+
     }
 
     /**
@@ -79,7 +99,11 @@ public class MainActivity extends AppCompatActivity {
 
 
 
+
     //Bring up the email application and send an email to
+
+    //Bring up the email application and send an email to
+
         Intent intent = new Intent(Intent.ACTION_SENDTO);
         intent.setData(Uri.parse("mailto"));//only email apps should handle this
         intent.putExtra(Intent.EXTRA_SUBJECT, "Just Java order for " + name);
